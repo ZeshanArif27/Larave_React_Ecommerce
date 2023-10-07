@@ -1,3 +1,5 @@
+# Visit the master branch for code.
+
 # React E-Commerce with Laravel Backend
 
 This repository houses the backend component for the React_E-commerce project. The Laravel backend is responsible for handling routing, managing database interactions, and providing data to the React frontend.
