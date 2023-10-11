@@ -37,7 +37,7 @@ class Products_Controller extends Controller
         return $result;
     }
     public function showProducts($id){
-        $products = prod::select('id','cat_id', 'title', 'dimensions', 'image', 'features', 'stock', 'price')->where('id', $id)->get();
+        $products = prod::select('id','cat_id', 'title', 'dimensions', 'image', 'features', 'stock', 'price', 'description')->where('id', $id)->get();
         
         if ($products->isEmpty()) {
             return response()->json(['message' => 'No products found for Cat_id: ' . $id], 404);
@@ -56,6 +56,7 @@ class Products_Controller extends Controller
                 'features' => $product->features,
                 'stock' => $product->stock,
                 'price' => $product->price,
+                'description' => $product->description,
             ];
             $result[] = $productData;
         }
